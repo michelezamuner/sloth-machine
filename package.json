@@ -1,0 +1,20 @@
+{
+    "name": "sloth-machine",
+    "version": "0.0.0",
+    "description": "Sloth Machine",
+    "main": "src/main.js",
+    "repository": "https://gitlab.com/michelezamuner/sloth-machine",
+    "author": {
+        "name": "Michele Zamuner",
+        "email": "michelezamuner@gmail.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^24.9.0"
+    },
+    "scripts": {
+        "test": "[ ! -L node_modules ] || rm node_modules && ln -s lib node_modules && SC_SM_ROOT=$(pwd) node --use_strict ./lib/.bin/jest",
+        "coverage": "[ ! -L node_modules ] || rm node_modules && ln -s lib node_modules && SC_SM_ROOT=$(pwd) node --use_strict ./lib/.bin/jest --coverage",
+        "ci": "[ ! -L node_modules ] || rm node_modules && ln -s lib node_modules && SC_SM_ROOT=$(pwd) JEST_ENV=ci node --use_strict ./lib/.bin/jest --coverage"
+    }
+}

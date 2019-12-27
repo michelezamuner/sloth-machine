@@ -1,0 +1,15 @@
+sudo: required
+
+language: javascript
+
+services:
+    - docker
+
+before_install:
+    - make build
+
+script:
+    - make run
+
+notifications:
+    email: false
