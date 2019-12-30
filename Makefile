@@ -14,7 +14,7 @@ run:
 	@docker run --rm $(tag)
 
 install:
-	@yarn install
+	@yarn
 
 ci:
 	@yarn run ci
